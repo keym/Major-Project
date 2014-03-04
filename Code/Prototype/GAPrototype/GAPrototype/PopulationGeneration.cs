@@ -1,12 +1,15 @@
 using System;
+using System.Collections.Generic;
+
 
 namespace GAPrototype
 {
 	public class PopulationGenerator
 	{
-		private Array<Chromosome> Population;
+		private Chromosome[] Population;
 		private int popSize;
 		private int chromosomeLength;
+        private Random R = new Random();
 
 		public int ChromosomeLength {
 			get {
@@ -27,15 +30,19 @@ namespace GAPrototype
 		}		
 		public PopulationGenerator (int popSize, int chromosomeLength)
 		{
+            PopSize = popSize;
+            ChromosomeLength = chromosomeLength;
 		}
 		
-		private Array<Chromosome> GeneratePopulation ()
+		public Chromosome[] GeneratePopulation()
 		{
-			Population = new Array<Chromosome>[PopulationSize];
+			Population = new Chromosome[popSize];
 			for(int i = 0; i<ChromosomeLength; i++)
 			{
-				Population[i] = new Chromosome(ChromosomeLength);
+				Population[i] = new Chromosome(ChromosomeLength, R);
 			}
+
+            return Population;
 		}
 	}
 }

@@ -5,9 +5,10 @@ namespace GAPrototype
 	public class Chromosome
 	{
 		private int fitness;
-		private Array<char> allels;
+		private char[] allels;
+        private Random Rand;
 
-		public Array<char> Allels {
+		public char[] Allels {
 			get {
 				return this.allels;
 			}
@@ -24,9 +25,10 @@ namespace GAPrototype
 				fitness = value;
 			}
 		}		
-		public Chromosome (int ChromosomeLength)
+		public Chromosome (int ChromosomeLength, Random rand)
 		{
-			allels = new Array<char>[ChromosomeLength];
+            Rand = rand;
+			allels = new char[ChromosomeLength];
 			for(int i = 0; i<ChromosomeLength; i++)
 			{
 				Allels[i] = GenerateValue();
@@ -36,9 +38,7 @@ namespace GAPrototype
 		
 		private char GenerateValue()
 		{
-			Random rand = new Random();
-			
-			int val = rand.Next(1,27);
+    		int val = Rand.Next(1,27);
 			switch(val)
 			{
 			case 1 : return 'a';
@@ -66,10 +66,25 @@ namespace GAPrototype
 			case 23 : return 'w';
 			case 24 : return 'x';
 			case 25 : return 'y';
-			case 16 : return 'z';
+			case 26 : return 'z';
 			}
+
+            throw new Exception();
 		}
-		
+
+        public override string ToString()
+        {
+            string ret = "";
+            for (int i = 0; i < Allels.Length; i++)
+            {
+                ret += Allels[i];
+            }
+
+            ret += " ";
+            ret += fitness;
+            ret += "\n";
+            return ret;
+        }
 	}
 }
 
