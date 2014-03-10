@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GAPrototype
 {
-    static class Zodiac
+    static class Z340
     {
         
     }
