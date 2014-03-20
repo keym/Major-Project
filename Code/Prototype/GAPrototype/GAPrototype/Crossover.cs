@@ -7,5 +7,14 @@ namespace GAPrototype
 {
     class Crossover
     {
+
+        public Crossover()
+        {
+        }
+
+        public Chromosome evolve(Chromosome alpha, Chromosome beta)
+        {
+            return new Chromosome(null);
+        }
     }
 }
