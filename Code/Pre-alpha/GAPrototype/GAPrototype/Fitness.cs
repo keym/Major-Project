@@ -8,6 +8,8 @@ namespace GAPrototype
     class Fitness
     {
         private Chromosome[] Population;
+
+        
         private Z340 Cipher;
         private Random r = new Random();
         private ngram[] Search;

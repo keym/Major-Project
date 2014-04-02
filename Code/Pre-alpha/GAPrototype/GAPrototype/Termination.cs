@@ -16,13 +16,13 @@ namespace GAPrototype
         {
             DateTime Now = DateTime.Now;
 
-            int length  = Now.Subtract(begin).TotalMinutes;
+            double length = Now.Subtract(begin).TotalMinutes;
 
-            if (length > 15)
+            if (length > 2)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
     }
 }

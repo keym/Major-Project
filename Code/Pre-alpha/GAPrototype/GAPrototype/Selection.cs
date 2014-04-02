@@ -8,7 +8,11 @@ namespace GAPrototype
     class Selection
     {
         private Chromosome[] population;
+
+
         private Chromosome[] intermediate;
+
+        
 
         public Selection(Chromosome[] Population )
         {
