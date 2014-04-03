@@ -10,7 +10,23 @@ namespace Genetic_Algorithm
     {
         public IChromosome evolve(IChromosome alpha, IChromosome beta)
         {
-            throw new NotImplementedException();
+            IChromosome offspring = new ZodiacChromosome(0, new char[alpha.Alleles.Length]);
+
+            int half = alpha.Alleles.Length/2;
+            int count = 0;
+
+            for(int i = 0; i<half; i++)
+            {
+                offspring.Alleles[i] = alpha.Alleles[i];
+                count++;
+            }
+
+            for(int j=count; j<beta.Alleles.Length-1; j++)
+            {
+                offspring.Alleles[j] = beta.Alleles[j];
+            }
+
+            return offspring;
         }
     }
 }

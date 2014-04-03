@@ -40,5 +40,19 @@ namespace Genetic_Algorithm
             Fitness = fitness;
             Alleles = alleles;
         }
+
+        public override string ToString()
+        {
+            string ret = "";
+            for (int i = 0; i < Alleles.Length; i++)
+            {
+                ret += Alleles[i];
+            }
+
+            ret += " ";
+            ret += fitness;
+            ret += "\n";
+            return ret;
+        }
     }
 }

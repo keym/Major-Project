@@ -45,22 +45,34 @@ namespace Genetic_Algorithm
             Random Rand = new Random();
             SinglePointCrossover crossover = new SinglePointCrossover();
             SingleMutation mutator = new SingleMutation();
+            int count = 0;
+            int next;
 
             foreach (IChromosome c in intermediate)
             {
                 int value = Rand.Next(0, 10);
                 if (0.1 * value < crossoverRate)
                 {
-                    crossover.evolve(c, null);
-                }
-            }
+                    if (count > intermediate.Length)
+                    {
+                        next = 0;
+                    }
+                    else
+                    {
+                        next = count;
+                    }
 
+                    intermediate[count] = crossover.evolve(c, intermediate[next]);
+                }
+                count ++;
+            }
+            count = 0;
             foreach (IChromosome c in intermediate)
             {
                 int value = Rand.Next(0, 10);
                 if (0.1 * value < mutationRate)
                 {
-                    mutator.mutate(c);
+                    intermediate[count] = mutator.mutate(c);
                 }
             }
             

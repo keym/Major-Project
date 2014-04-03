@@ -26,7 +26,7 @@ namespace Genetic_Algorithm
             Cipher.Add(new int[] { 6, 57, 91, 156, 191, 222, 284 });
             Cipher.Add(new int[] { 7, 56, 89, 160, 226, 266 });
             Cipher.Add(new int[] { 8, 60, 115, 158, 234, 250 });
-            Cipher.Add( new int[] { 9, 80, 298 });
+            Cipher.Add(new int[] { 9, 80, 298 });
             Cipher.Add(new int[] { 10, 84, 97, 309, 330 });
             Cipher.Add(new int[] { 11, 77, 119, 178, 194, 213, 156, 287, 307, 337 });
             Cipher.Add(new int[] { 12, 242, 278 });

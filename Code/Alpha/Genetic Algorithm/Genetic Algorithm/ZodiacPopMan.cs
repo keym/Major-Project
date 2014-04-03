@@ -48,25 +48,69 @@ namespace Genetic_Algorithm
             Boolean terminate = false;
             DateTime Begin = DateTime.Now;
 
-            ZodiacPopGen popGen = new ZodiacPopGen(PopulationSize, ChromosomeLength);
+            IPopulationGenerator popGen = new ZodiacPopGen(PopulationSize, ChromosomeLength);
             Population = popGen.GeneratePopulation();
-            Z340Cipher cipher = new Z340Cipher();
+            ICipher cipher = new Z340Cipher();
             TimeTermination terminator = new TimeTermination();
             
             while (terminate == false)
             {
-                NGramFitness fit = new NGramFitness(Population, cipher);
+                IFitness fit = new NGramFitness(Population, cipher);
                 Population = fit.calcFitness();
 
-                RouletteSelection selection = new RouletteSelection(Population);
+                ISelection selection = new RouletteSelection(Population);
                 Intermediate = selection.selectAlleles();
+
+                IGenetics genetics = new ZodiacGenetics(0.4, 0.1);
+                genetics.reproduce(Intermediate);
 
                 terminate = terminator.doesTerminate(Begin);
             }
 
+            IChromosome best = findMaxFitness();
+            String plaintext = generateCipherText(best, cipher);
+
+            string output = best.ToString();
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"output.txt");
+            file.WriteLine(output);
+            file.WriteLine(plaintext);
+            file.Close();
+
             finish();
         }
 
+        private IChromosome findMaxFitness()
+        {
+            IChromosome best;
+
+            best = Population[0];
+
+            for(int i = 1; i<Population.Length-1; i++)
+            {
+                if (best.Fitness < Population[i].Fitness)
+                {
+                    best = Population[i];
+                }
+            }
+
+            return best;
+        }
+        public string generateCipherText(IChromosome c, ICipher cipher)
+        {
+            char[] ciphertext = new char[340];
+            int i = 0;
+            foreach (char allele in c.Alleles)
+            {
+
+                foreach (int letter in cipher.Cipher[i])
+                {
+                    ciphertext[letter - 1] = allele;
+
+                }
+                i++;
+            }
+            return new string(ciphertext);
+        }
         public void finish()
         {
             

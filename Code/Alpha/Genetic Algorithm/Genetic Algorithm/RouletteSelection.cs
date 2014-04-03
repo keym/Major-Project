@@ -55,7 +55,7 @@ namespace Genetic_Algorithm
                 double addedfit = 0;
                 int count = 0;
 
-                for (int j = 0; i < Intermediate.Length; j++)
+                for (int j = 0; j < Intermediate.Length-1; j++)
                 {
                     addedfit += population[count].Fitness;
                     if (addedfit > choicefit)
