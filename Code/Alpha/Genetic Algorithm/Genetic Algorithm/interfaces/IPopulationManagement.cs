@@ -21,7 +21,7 @@ namespace Genetic_Algorithm
         }
         
         void Run();
-        void finish();
+        void Output(string output);
 
     }
 }

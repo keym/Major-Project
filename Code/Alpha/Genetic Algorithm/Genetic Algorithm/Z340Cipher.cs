@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Genetic_Algorithm
 {
-    class Z340Cipher : ICipher
+    class Z340Cipher : ICipher 
     {
         private List<Array> cipher = new List<Array>();
 
@@ -28,17 +28,17 @@ namespace Genetic_Algorithm
             Cipher.Add(new int[] { 8, 60, 115, 158, 234, 250 });
             Cipher.Add(new int[] { 9, 80, 298 });
             Cipher.Add(new int[] { 10, 84, 97, 309, 330 });
-            Cipher.Add(new int[] { 11, 77, 119, 178, 194, 213, 156, 287, 307, 337 });
+            Cipher.Add(new int[] { 11, 77, 119, 178, 194, 213, 256, 287, 307, 337 });
             Cipher.Add(new int[] { 12, 242, 278 });
             Cipher.Add(new int[] { 13, 47, 118, 135, 277, 289 });
             Cipher.Add(new int[] { 14, 184, 197, 275, 302 });
             Cipher.Add(new int[] { 15, 43, 114, 121, 223, 271 });
             Cipher.Add(new int[] { 16, 68, 100, 110, 122, 145, 188, 229, 272 });
             Cipher.Add(new int[] { 17, 76, 95, 137, 310 });
-            Cipher.Add(new int[] { 18, 120, 212, 225, 328 });
+            Cipher.Add(new int[] { 18, 130, 212, 225, 328 });
             Cipher.Add(new int[] { 20, 40, 64, 65, 72, 81, 105, 128, 133, 140, 142, 159, 162, 172, 201, 211, 237, 238, 255, 276, 282, 290, 291, 320 });
-            Cipher.Add(new int[] { 21, 35, 137, 168, 181, 203, 216, 140, 261, 286, 315, 319 });
-            Cipher.Add(new int[] { 22, 45, 102, 120, 218, 263, 340 });
+            Cipher.Add(new int[] { 21, 35, 147, 168, 181, 203, 216, 240, 261, 286, 315, 319 });
+            Cipher.Add(new int[] { 22, 45, 102, 120, 218, 263, 304 });
             Cipher.Add(new int[] { 23, 48, 103, 126, 210 });
             Cipher.Add(new int[] { 24, 63, 92, 127, 163, 187, 264, 299, 318, 334 });
             Cipher.Add(new int[] { 25, 108 });

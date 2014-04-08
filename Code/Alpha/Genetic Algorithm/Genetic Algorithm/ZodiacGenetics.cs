@@ -62,7 +62,16 @@ namespace Genetic_Algorithm
                         next = count;
                     }
 
-                    intermediate[count] = crossover.evolve(c, intermediate[next]);
+                    IChromosome[] generation =  crossover.evolve(c, intermediate[next]);
+                    intermediate[count] = generation[1];
+                    if (count == 0)
+                    {
+                        intermediate[intermediate.Length - 1] = generation[0];
+                    }
+                    else
+                    {
+                        intermediate[count - 1] = generation[0];
+                    }
                 }
                 count ++;
             }

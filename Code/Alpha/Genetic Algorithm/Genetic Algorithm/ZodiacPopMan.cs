@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Genetic_Algorithm
 {
@@ -65,18 +66,18 @@ namespace Genetic_Algorithm
                 genetics.reproduce(Intermediate);
 
                 terminate = terminator.doesTerminate(Begin);
+
+                IChromosome generationMax = findMaxFitness();
+                Output(generationMax.Fitness.ToString());
             }
 
             IChromosome best = findMaxFitness();
             String plaintext = generateCipherText(best, cipher);
-
             string output = best.ToString();
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"output.txt");
-            file.WriteLine(output);
-            file.WriteLine(plaintext);
-            file.Close();
 
-            finish();
+            
+            Output(output);
+            Output(plaintext);
         }
 
         private IChromosome findMaxFitness()
@@ -95,13 +96,13 @@ namespace Genetic_Algorithm
 
             return best;
         }
+
         public string generateCipherText(IChromosome c, ICipher cipher)
         {
             char[] ciphertext = new char[340];
             int i = 0;
             foreach (char allele in c.Alleles)
             {
-
                 foreach (int letter in cipher.Cipher[i])
                 {
                     ciphertext[letter - 1] = allele;
@@ -111,9 +112,13 @@ namespace Genetic_Algorithm
             }
             return new string(ciphertext);
         }
-        public void finish()
+
+        public void Output(string output)
         {
-            
+            using (StreamWriter file = File.AppendText(@"output.txt"))
+            {
+                file.WriteLine(output);
+            }
         }
     }
 }

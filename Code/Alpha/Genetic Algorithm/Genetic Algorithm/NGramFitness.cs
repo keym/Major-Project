@@ -60,7 +60,6 @@ namespace Genetic_Algorithm
             int i = 0;
             foreach (char allele in c.Alleles)
             {
-                
                 foreach (int letter in Cipher.Cipher[i])
                 {
                     ciphertext[letter - 1] = allele;

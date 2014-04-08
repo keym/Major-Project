@@ -8,6 +8,6 @@ namespace Genetic_Algorithm
 {
     interface ICrossover
     {
-        IChromosome evolve(IChromosome alpha, IChromosome beta);
+        IChromosome[] evolve(IChromosome alpha, IChromosome beta);
     }
 }
