@@ -9,6 +9,13 @@ namespace Genetic_Algorithm
     class Z340Cipher : ICipher 
     {
         private List<Array> cipher = new List<Array>();
+        private int length;
+
+        public int Length
+        {
+            get { return length; }
+            set { length = value; }
+        }
 
         public List<Array> Cipher
         {
@@ -18,6 +25,7 @@ namespace Genetic_Algorithm
 
         public Z340Cipher()
         {
+            Length = 340;
             Cipher.Add(new int[] { 1, 50, 301, 327 });
             Cipher.Add(new int[] { 2, 177, 248 });
             Cipher.Add(new int[] { 3, 66, 88, 144, 173, 192, 221, 273 });
@@ -36,7 +44,7 @@ namespace Genetic_Algorithm
             Cipher.Add(new int[] { 16, 68, 100, 110, 122, 145, 188, 229, 272 });
             Cipher.Add(new int[] { 17, 76, 95, 137, 310 });
             Cipher.Add(new int[] { 18, 130, 212, 225, 328 });
-            Cipher.Add(new int[] { 20, 40, 64, 65, 72, 81, 105, 128, 133, 140, 142, 159, 162, 172, 201, 211, 237, 238, 255, 276, 282, 290, 291, 320 });
+            Cipher.Add(new int[] { 20, 40, 64, 65, 72, 81, 105, 128, 133, 140, 142, 159, 162, 172, 201, 211, 237, 238, 255, 276, 282, 290, 291, 340 });
             Cipher.Add(new int[] { 21, 35, 147, 168, 181, 203, 216, 240, 261, 286, 315, 319 });
             Cipher.Add(new int[] { 22, 45, 102, 120, 218, 263, 304 });
             Cipher.Add(new int[] { 23, 48, 103, 126, 210 });

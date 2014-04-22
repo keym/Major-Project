@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Genetic_Algorithm
 {
-    class NGramFitness : IFitness
+    class TriGramFitness : IFitness
     {
         private IChromosome[] population;
         private ICipher cipher;
@@ -36,7 +37,7 @@ namespace Genetic_Algorithm
             }
         }
 
-        public NGramFitness(IChromosome[] population, ICipher cipher)
+        public TriGramFitness(IChromosome[] population, ICipher cipher)
         {
             Population = population;
             Cipher = cipher;
@@ -56,7 +57,7 @@ namespace Genetic_Algorithm
 
         public string generateCipherText(IChromosome c, ICipher cipher)
         {
-            char[] ciphertext = new char[340];
+            char[] ciphertext = new char[cipher.Length];
             int i = 0;
             foreach (char allele in c.Alleles)
             {
@@ -93,24 +94,8 @@ namespace Genetic_Algorithm
             double max3l = 1;
             Search =  new List<ngram>();
 
-            System.IO.StreamReader file = new System.IO.StreamReader(@"count_2l.txt");
-            while ((line = file.ReadLine()) != null)
-            {
-
-                string[] values = line.Split(',');
-
-                if (count == 0)
-                {
-                    max2l = Convert.ToDouble(values[1]);
-                }
-
-                Search.Add(new ngram(values[0], Convert.ToDouble(values[1]) / max2l));
-                count++;
-            }
-            file.Close();
-
             count = 0;
-            file = new System.IO.StreamReader(@"count_3l.txt");
+            StreamReader file = new System.IO.StreamReader(@"count_3l.txt");
             while ((line = file.ReadLine()) != null)
             {
                 string[] values = line.Split(',');
@@ -122,30 +107,6 @@ namespace Genetic_Algorithm
                 count++;
             }
             file.Close();
-        }
-    }
-
-    class ngram
-    {
-        private string search;
-
-        public string Search
-        {
-            get { return search; }
-            set { search = value; }
-        }
-        private double value;
-
-        public double Value
-        {
-            get { return this.value; }
-            set { this.value = value; }
-        }
-
-        public ngram(string search, double value)
-        {
-            Search = search;
-            Value = value;
         }
     }
 }

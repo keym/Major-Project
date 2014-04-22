@@ -41,6 +41,17 @@ namespace Genetic_Algorithm
         }
         public IChromosome[] selectAlleles()
         {
+            IChromosome elite = population[0];
+            foreach (IChromosome c in population)
+            {
+                if (c.Fitness > elite.Fitness)
+                {
+                    elite = c;
+                }
+            }
+
+            intermediate[0] = elite;
+
             double maxfitness = 0;
             Random rand = new Random();
 
@@ -49,7 +60,7 @@ namespace Genetic_Algorithm
                 maxfitness = maxfitness + c.Fitness;
             }
 
-            for(int i = 0; i < Intermediate.Length; i++)
+            for(int i = 1; i < Intermediate.Length; i++)
             {
                 int choicefit = rand.Next(0, Convert.ToInt32(maxfitness));
                 double addedfit = 0;

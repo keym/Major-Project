@@ -8,6 +8,11 @@ namespace Genetic_Algorithm
 {
     interface ICipher
     {
+        int Length
+        {
+            get;
+            set;
+        }
         List<Array> Cipher
         {
             get;

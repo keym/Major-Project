@@ -8,8 +8,16 @@ namespace Genetic_Algorithm
 {
     class TimeTermination
     {
-        public TimeTermination()
+        private int timeLimit;
+
+        public int TimeLimit
         {
+            get { return timeLimit; }
+            set { timeLimit = value; }
+        }
+        public TimeTermination(int timeLimit)
+        {
+            TimeLimit = timeLimit;
         }
 
         public bool doesTerminate(DateTime begin)
@@ -18,7 +26,7 @@ namespace Genetic_Algorithm
 
             double length = Now.Subtract(begin).TotalMinutes;
 
-            if (length > 2)
+            if (length > TimeLimit)
             {
                 return true;
             }
