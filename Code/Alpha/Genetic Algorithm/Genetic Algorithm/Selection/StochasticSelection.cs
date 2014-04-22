@@ -53,6 +53,7 @@ namespace Genetic_Algorithm
             }
 
             intermediate[0] = elite;
+            intermediate[0].Elite = true;
 
             double maxfitness = 0;
             double populationsize = Population.Length;

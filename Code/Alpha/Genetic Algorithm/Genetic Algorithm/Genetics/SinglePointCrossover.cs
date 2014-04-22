@@ -11,8 +11,8 @@ namespace Genetic_Algorithm
         public IChromosome[] evolve(IChromosome alpha, IChromosome beta)
         {
             IChromosome[] offspring = new IChromosome[2];
-            offspring[0] = new ZodiacChromosome(0, new char[alpha.Alleles.Length]);
-            offspring[1] = new ZodiacChromosome(0, new char[alpha.Alleles.Length]);
+            offspring[0] = new Chromosome(0, new char[alpha.Alleles.Length]);
+            offspring[1] = new Chromosome(0, new char[alpha.Alleles.Length]);
 
             int half = alpha.Alleles.Length/2;
             int count = 0;

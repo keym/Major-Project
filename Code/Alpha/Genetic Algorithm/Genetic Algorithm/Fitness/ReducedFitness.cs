@@ -94,7 +94,7 @@ namespace Genetic_Algorithm
             double max3l = 1;
             Search =  new List<ngram>();
 
-            StreamReader file = new System.IO.StreamReader(@"count_2l.txt");
+            StreamReader file = new System.IO.StreamReader(@"count_2l_reduced.txt");
             while ((line = file.ReadLine()) != null)
             {
 
@@ -111,7 +111,7 @@ namespace Genetic_Algorithm
             file.Close();
 
             count = 0;
-            file = new System.IO.StreamReader(@"count_3l.txt");
+            file = new System.IO.StreamReader(@"count_3l_reduced.txt");
             while ((line = file.ReadLine()) != null)
             {
                 string[] values = line.Split(',');

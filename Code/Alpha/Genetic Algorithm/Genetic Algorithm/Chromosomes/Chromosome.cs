@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace Genetic_Algorithm
 {
-    public class ZodiacChromosome : IChromosome
+    public class Chromosome : IChromosome
     {
         private double fitness;
         private char[] alleles;
+        private bool elite;
+
+        public bool Elite
+        {
+            get { return elite; }
+            set { elite = value; }
+        }
 
         public double Fitness
         {
@@ -35,7 +42,7 @@ namespace Genetic_Algorithm
             }
         }
 
-        public ZodiacChromosome(double fitness, char[] alleles)
+        public Chromosome(double fitness, char[] alleles)
         {
             Fitness = fitness;
             Alleles = alleles;

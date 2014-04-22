@@ -51,6 +51,7 @@ namespace Genetic_Algorithm
             }
 
             intermediate[0] = elite;
+            intermediate[0].Elite = true;
 
 
             for (int i = 1; i < Intermediate.Length; i++)

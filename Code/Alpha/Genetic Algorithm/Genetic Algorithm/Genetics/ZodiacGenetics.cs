@@ -57,6 +57,7 @@ namespace Genetic_Algorithm
                     mutator = new SingleMutation();
                     break;
                 case 1:
+                    MutationRate = 1;
                     mutator = new MultiMutation();
                     break;
                 default:
@@ -83,7 +84,7 @@ namespace Genetic_Algorithm
             foreach (IChromosome c in intermediate)
             {
                 int value = Rand.Next(0, 10);
-                if (count > 0)
+                if (!c.Elite)
                 {
                     if (0.1 * value < crossoverRate)
                     {
@@ -113,7 +114,7 @@ namespace Genetic_Algorithm
             count = 0;
             foreach (IChromosome c in intermediate)
             {
-                if (count > 0)
+                if (!c.Elite)
                 {
                     int value = Rand.Next(0, 10);
                     if (0.1 * value < mutationRate)

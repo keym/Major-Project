@@ -44,11 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chromosomes\SubChromosome.cs" />
     <Compile Include="Fitness\BiGramFitness.cs" />
     <Compile Include="Fitness\ngram.cs" />
     <Compile Include="Genetics\DualPointCrossover.cs" />
     <Compile Include="Genetics\MultiMutation.cs" />
+    <Compile Include="Genetics\SubMultiMutation.cs" />
+    <Compile Include="Genetics\SubSingleMutation.cs" />
     <Compile Include="Interfaces\IPopulationManagement.cs" />
     <Compile Include="Interfaces\IChromosome.cs" />
     <Compile Include="Interfaces\ICipher.cs" />
@@ -80,7 +81,7 @@
     <Compile Include="Fitness\TriGramFitness.cs" />
     <Compile Include="Ciphers\Z340Cipher.cs" />
     <Compile Include="Ciphers\Z408Cipher.cs" />
-    <Compile Include="Chromosomes\ZodiacChromosome.cs" />
+    <Compile Include="Chromosomes\Chromosome.cs" />
     <Compile Include="Genetics\ZodiacGenetics.cs" />
     <Compile Include="Population Generation\ZodiacPopGen.cs" />
     <Compile Include="PopMan.cs" />
@@ -111,12 +112,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="count_2l_reduced.txt" />
     <Content Include="count_3l.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="count_2l.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="count_3l_reduced.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

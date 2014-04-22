@@ -51,6 +51,7 @@ namespace Genetic_Algorithm
             }
 
             intermediate[0] = elite;
+            intermediate[0].Elite = true;
 
             double maxfitness = 0;
             Random rand = new Random();

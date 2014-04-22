@@ -57,11 +57,11 @@ namespace Genetic_Algorithm
 
         public IChromosome[] GeneratePopulation()
         {
-            Population = new ZodiacChromosome[popSize];
+            Population = new Chromosome[PopSize];
             char[] values = new char[ChromosomeLength]; ;
             R = new Random();
 
-            for (int i = 0; i < popSize; i++)
+            for (int i = 0; i < PopSize; i++)
             {
                 values = new char[ChromosomeLength];
 
@@ -70,7 +70,7 @@ namespace Genetic_Algorithm
                     values[j] = GenerateValue();
                 }
 
-                Population[i] = new ZodiacChromosome(0, values);
+                Population[i] = new Chromosome(0, values);
             }
 
             return Population;

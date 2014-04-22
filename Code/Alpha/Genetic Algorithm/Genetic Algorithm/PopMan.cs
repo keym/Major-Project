@@ -70,7 +70,7 @@ namespace Genetic_Algorithm
             switch (this.cipher)
             {
                 case 0:
-                    ChromosomeLength = 0;
+                    ChromosomeLength = 26;
                     popGen = new SubPopGen(PopulationSize, ChromosomeLength);
                     Cipher = new SubstitutionCipher();
                     break;
@@ -142,6 +142,9 @@ namespace Genetic_Algorithm
                     case 1:
                         genetics = new ZodiacGenetics(0.4, 0.1, this.mutation, this.crossover);
                         break;
+                    case 2:
+                        genetics = new ZodiacGenetics(0.4, 0.1, this.mutation, this.crossover);
+                        break;
                     default:
                         genetics = null;
                         break;
@@ -152,7 +155,7 @@ namespace Genetic_Algorithm
                 terminate = terminator.doesTerminate(Begin);
 
                 IChromosome generationMax = findMaxFitness();
-                Output(generationMax.Fitness.ToString());
+                Output(generationMax.ToString());
             }
 
             IChromosome best = findMaxFitness();

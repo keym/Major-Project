@@ -19,5 +19,11 @@ namespace Genetic_Algorithm
             get;
             set;
         }
+
+        bool Elite
+        {
+            get;
+            set;
+        }
     }
 }
