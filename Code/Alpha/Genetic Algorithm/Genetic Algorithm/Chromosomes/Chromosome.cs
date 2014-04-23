@@ -57,8 +57,7 @@ namespace Genetic_Algorithm
             }
 
             ret += " ";
-            ret += fitness;
-            ret += "\n";
+            ret += fitness;;
             return ret;
         }
     }

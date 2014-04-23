@@ -190,12 +190,15 @@ namespace Genetic_Algorithm
             int i = 0;
             foreach (char allele in c.Alleles)
             {
-                foreach (int letter in cipher.Cipher[i])
+                if (i < cipher.Cipher.Count)
                 {
-                    ciphertext[letter - 1] = allele;
+                    foreach (int letter in cipher.Cipher[i])
+                    {
+                        ciphertext[letter - 1] = allele;
 
+                    }
+                    i++;
                 }
-                i++;
             }
             return new string(ciphertext);
         }

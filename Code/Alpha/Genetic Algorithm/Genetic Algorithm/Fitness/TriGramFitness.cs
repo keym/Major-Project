@@ -88,25 +88,25 @@ namespace Genetic_Algorithm
 
         public void readfiles()
         {
-            string line;
             int count = 0;
-            double max2l = 1;
             double max3l = 1;
             Search =  new List<ngram>();
 
-            count = 0;
-            StreamReader file = new System.IO.StreamReader(@"count_3l.txt");
-            while ((line = file.ReadLine()) != null)
+            string data = Properties.Resources.count3l;
+            string[] values = data.Split('\n');
+
+            foreach (string s in values)
             {
-                string[] values = line.Split(',');
+                string[] ngrams = s.Split(',');
+
                 if (count == 0)
                 {
-                    max3l = Convert.ToDouble(values[1]);
+                    max3l = Convert.ToDouble(ngrams[1]);
                 }
-                Search.Add(new ngram(values[0], Convert.ToDouble(values[1]) / max2l));
+
+                Search.Add(new ngram(ngrams[0], Convert.ToDouble(ngrams[1]) / max3l));
                 count++;
             }
-            file.Close();
         }
     }
 }

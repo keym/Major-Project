@@ -91,6 +91,11 @@
             // nud_PopulationSize
             // 
             this.nud_PopulationSize.Location = new System.Drawing.Point(119, 37);
+            this.nud_PopulationSize.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
             this.nud_PopulationSize.Name = "nud_PopulationSize";
             this.nud_PopulationSize.Size = new System.Drawing.Size(120, 20);
             this.nud_PopulationSize.TabIndex = 6;
@@ -186,6 +191,11 @@
             // nud_Time
             // 
             this.nud_Time.Location = new System.Drawing.Point(119, 11);
+            this.nud_Time.Maximum = new decimal(new int[] {
+            720,
+            0,
+            0,
+            0});
             this.nud_Time.Name = "nud_Time";
             this.nud_Time.Size = new System.Drawing.Size(120, 20);
             this.nud_Time.TabIndex = 15;

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Genetic_Algorithm.Properties
-{
-
-
+namespace Genetic_Algorithm.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,207 @@ namespace Genetic_Algorithm.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Genetic_Algorithm.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to in,134812613554
+        ///th,133210262170
+        ///er,119214789533
+        ///re,108669181717
+        ///he,106498528786
+        ///an,105422467512
+        ///on,100461773921
+        ///es,97326307798
+        ///or,85998433585
+        ///te,80948650956
+        ///at,80609883139
+        ///ti,79834588969
+        ///st,78728300226
+        ///en,77314896004
+        ///nt,71720202984
+        ///ar,68756067210
+        ///to,68548751664
+        ///nd,68018862077
+        ///al,64032793037
+        ///it,60786494374
+        ///se,58165976437
+        ///ed,57514469508
+        ///is,56531345460
+        ///ea,55939058323
+        ///ng,54671896948
+        ///ou,52913816186
+        ///le,52533619401
+        ///co,52490369344
+        ///me,50958591639
+        ///ne,48426255131
+        ///ri,48154583840
+        ///ro,46608666502
+        ///de,46344292825
+        ///ra,4613542 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string count2l {
+            get {
+                return ResourceManager.GetString("count2l", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to in,134812613554
+        ///th,133210262170
+        ///er,119214789533
+        ///re,108669181717
+        ///he,106498528786
+        ///an,105422467512
+        ///on,100461773921
+        ///es,97326307798
+        ///or,85998433585
+        ///te,80948650956
+        ///at,80609883139
+        ///ti,79834588969
+        ///st,78728300226
+        ///en,77314896004
+        ///nt,71720202984
+        ///ar,68756067210
+        ///to,68548751664
+        ///nd,68018862077
+        ///al,64032793037
+        ///it,60786494374
+        ///se,58165976437
+        ///ed,57514469508
+        ///is,56531345460
+        ///ea,55939058323
+        ///ng,54671896948
+        ///ou,52913816186
+        ///le,52533619401
+        ///co,52490369344
+        ///me,50958591639
+        ///ne,48426255131
+        ///ri,48154583840
+        ///ro,46608666502
+        ///de,46344292825
+        ///ra,4613542 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string count2lreduced {
+            get {
+                return ResourceManager.GetString("count2lreduced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the,82103550112
+        ///ing,43727954927
+        ///and,43452082914
+        ///ion,39907843075
+        ///tio,32705432538
+        ///ent,31928292897
+        ///for,26276145239
+        ///ati,25312331919
+        ///ter,21635845251
+        ///ate,19978168727
+        ///ers,18428556963
+        ///res,16905804845
+        ///her,16817683835
+        ///est,16153205958
+        ///com,16125312457
+        ///pro,15952570392
+        ///ere,15305553822
+        ///all,15280030691
+        ///int,15254348969
+        ///men,15240388304
+        ///you,15014247063
+        ///ons,14765503549
+        ///our,14731181262
+        ///con,14345102137
+        ///are,14170861835
+        ///tha,13970309343
+        ///ver,13912756928
+        ///ess,13754386504
+        ///thi,13367612267
+        ///rea,13285735421
+        ///sta,12930801230
+        ///tin,12540895012
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string count3l {
+            get {
+                return ResourceManager.GetString("count3l", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the,82103550112
+        ///ing,43727954927
+        ///and,43452082914
+        ///ion,39907843075
+        ///tio,32705432538
+        ///ent,31928292897
+        ///for,26276145239
+        ///ati,25312331919
+        ///ter,21635845251
+        ///ate,19978168727
+        ///ers,18428556963
+        ///res,16905804845
+        ///her,16817683835
+        ///est,16153205958
+        ///com,16125312457
+        ///pro,15952570392
+        ///ere,15305553822
+        ///all,15280030691
+        ///int,15254348969
+        ///men,15240388304
+        ///you,15014247063
+        ///ons,14765503549
+        ///our,14731181262
+        ///con,14345102137
+        ///are,14170861835
+        ///tha,13970309343
+        ///ver,13912756928
+        ///ess,13754386504
+        ///thi,13367612267
+        ///rea,13285735421
+        ///sta,12930801230
+        ///tin,12540895012
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string count3lreduced {
+            get {
+                return ResourceManager.GetString("count3lreduced", resourceCulture);
             }
         }
     }

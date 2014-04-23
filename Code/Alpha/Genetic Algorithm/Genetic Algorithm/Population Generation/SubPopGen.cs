@@ -100,7 +100,7 @@ namespace Genetic_Algorithm
             key[24] = 'y';
             key[25] = 'z';
 
-            for (int i = key.Length; i > 0; i--)
+            for (int i = key.Length -1 ; i > 0; i--)
             {
                 int j = Rand.Next(0, key.Length);
                 char swap = key[i];

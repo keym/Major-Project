@@ -61,12 +61,15 @@ namespace Genetic_Algorithm
             int i = 0;
             foreach (char allele in c.Alleles)
             {
-                foreach (int letter in Cipher.Cipher[i])
+                if (i < Cipher.Cipher.Count)
                 {
-                    ciphertext[letter - 1] = allele;
-                    
+                    foreach (int letter in Cipher.Cipher[i])
+                    {
+                        ciphertext[letter - 1] = allele;
+
+                    }
+                    i++;
                 }
-                i++;
             }
             return new string(ciphertext);
         }
@@ -80,7 +83,7 @@ namespace Genetic_Algorithm
             {
                 double instances = (ciphertext.Length - copy.Replace(s.Search, "").Length) / s.Search.Length;
 
-                fitness = fitness + (instances *  s.Value);
+                fitness = fitness + (instances * s.Value);
             }
 
             return fitness;
@@ -88,41 +91,41 @@ namespace Genetic_Algorithm
 
         public void readfiles()
         {
-            string line;
             int count = 0;
             double max2l = 1;
             double max3l = 1;
-            Search =  new List<ngram>();
+            Search = new List<ngram>();
 
-            StreamReader file = new System.IO.StreamReader(@"count_2l.txt");
-            while ((line = file.ReadLine()) != null)
+            string data = Properties.Resources.count2l;
+            string[] values = data.Split('\n');
+
+            foreach (string s in values)
             {
-
-                string[] values = line.Split(',');
+                string[] ngrams = s.Split(',');
 
                 if (count == 0)
                 {
-                    max2l = Convert.ToDouble(values[1]);
+                    max2l = Convert.ToDouble(ngrams[1]);
                 }
 
-                Search.Add(new ngram(values[0], Convert.ToDouble(values[1]) / max2l));
+                Search.Add(new ngram(ngrams[0], Convert.ToDouble(ngrams[1]) / max2l));
                 count++;
             }
-            file.Close();
 
             count = 0;
-            file = new System.IO.StreamReader(@"count_3l.txt");
-            while ((line = file.ReadLine()) != null)
+            data = Properties.Resources.count3l;
+            values = data.Split('\n');
+
+            foreach (string s in values)
             {
-                string[] values = line.Split(',');
+                string[] ngrams = s.Split(',');
                 if (count == 0)
                 {
-                    max3l = Convert.ToDouble(values[1]);
+                    max3l = Convert.ToDouble(ngrams[1]);
                 }
-                Search.Add(new ngram(values[0], Convert.ToDouble(values[1]) / max2l));
+                Search.Add(new ngram(ngrams[0], Convert.ToDouble(ngrams[1]) / max3l));
                 count++;
             }
-            file.Close();
         }
     }
 }
