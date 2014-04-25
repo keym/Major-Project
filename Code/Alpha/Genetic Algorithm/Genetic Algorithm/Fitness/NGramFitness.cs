@@ -126,6 +126,11 @@ namespace Genetic_Algorithm
                 Search.Add(new ngram(ngrams[0], Convert.ToDouble(ngrams[1]) / max3l));
                 count++;
             }
+
+            Search.Add(new ngram("slaves", 10));
+            Search.Add(new ngram("killing", 10));
+            Search.Add(new ngram("kill", 10));
+            Search.Add(new ngram("paradice", 10));
         }
     }
 }

@@ -61,12 +61,15 @@ namespace Genetic_Algorithm
             int i = 0;
             foreach (char allele in c.Alleles)
             {
-                foreach (int letter in Cipher.Cipher[i])
+                if (i < Cipher.Cipher.Count)
                 {
-                    ciphertext[letter - 1] = allele;
-                    
+                    foreach (int letter in Cipher.Cipher[i])
+                    {
+                        ciphertext[letter - 1] = allele;
+
+                    }
+                    i++;
                 }
-                i++;
             }
             return new string(ciphertext);
         }
@@ -107,6 +110,11 @@ namespace Genetic_Algorithm
                 Search.Add(new ngram(ngrams[0], Convert.ToDouble(ngrams[1]) / max2l));
                 count++;
             }
+
+            Search.Add(new ngram("slaves", 10));
+            Search.Add(new ngram("killing", 10));
+            Search.Add(new ngram("kill", 10));
+            Search.Add(new ngram("paradice", 10));
         }
     }
 }

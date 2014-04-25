@@ -137,13 +137,13 @@ namespace Genetic_Algorithm
                 switch (this.cipher)
                 {
                     case 0: 
-                        genetics = new SubGenetics(0.4, 0.1, this.crossover, this.mutation);
+                        genetics = new SubGenetics(0.6, 0.1, this.crossover, this.mutation);
                         break;
                     case 1:
-                        genetics = new ZodiacGenetics(0.4, 0.1, this.mutation, this.crossover);
+                        genetics = new ZodiacGenetics(0.6, 0.1, this.mutation, this.crossover);
                         break;
                     case 2:
-                        genetics = new ZodiacGenetics(0.4, 0.1, this.mutation, this.crossover);
+                        genetics = new ZodiacGenetics(0.6, 0.1, this.mutation, this.crossover);
                         break;
                     default:
                         genetics = null;
