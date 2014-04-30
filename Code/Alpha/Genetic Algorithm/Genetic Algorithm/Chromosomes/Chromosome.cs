@@ -56,7 +56,7 @@ namespace Genetic_Algorithm
                 ret += Alleles[i];
             }
 
-            ret += " ";
+            ret += '\n';
             ret += fitness;;
             return ret;
         }

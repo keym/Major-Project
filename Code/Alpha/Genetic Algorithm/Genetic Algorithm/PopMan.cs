@@ -156,15 +156,31 @@ namespace Genetic_Algorithm
 
                 IChromosome generationMax = findMaxFitness();
                 Output(generationMax.ToString());
+                double mean = findMeanFitness();
+                Output(mean.ToString());
             }
 
             IChromosome best = findMaxFitness();
             String plaintext = generateCipherText(best, Cipher);
             string output = best.ToString();
 
-            
             Output(output);
             Output(plaintext);
+        }
+
+        private double findMeanFitness()
+        {
+            double mean;
+            double total = 0;
+
+            foreach (IChromosome c in Population)
+            {
+                total = total + c.Fitness;
+            }
+
+            mean = total / Population.Length;
+     
+            return mean;
         }
 
         private IChromosome findMaxFitness()

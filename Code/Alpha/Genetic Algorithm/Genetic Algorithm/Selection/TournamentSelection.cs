@@ -42,6 +42,8 @@ namespace Genetic_Algorithm
         public IChromosome[] selectAlleles()
         {
             IChromosome elite = population[0];
+            population[0].Elite = false;
+
             foreach(IChromosome c in population)
             {
                 if (c.Fitness > elite.Fitness)

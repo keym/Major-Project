@@ -18,7 +18,7 @@ namespace Genetic_Algorithm
 
             for (int i = 0; i < c.Alleles.Length; i++)
             {
-                if (Rand.Next(0, 100) == 0)
+                if (Rand.Next(0, 100) < 5)
                 {
                     int swap = Rand.Next(0, c.Alleles.Length);
 
