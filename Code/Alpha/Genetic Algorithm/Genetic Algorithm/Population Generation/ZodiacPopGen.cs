@@ -11,6 +11,7 @@ namespace Genetic_Algorithm
         private IChromosome[] population;
         private int popSize;
         private int chromosomeLength;
+        private int[] letterFrequencies;
         private Random R;
 
         public IChromosome[] Population
@@ -53,6 +54,34 @@ namespace Genetic_Algorithm
         {
             PopSize = popSize;
             ChromosomeLength = chromosomeLength;
+            letterFrequencies = new int[26];
+            letterFrequencies[0] = 8;
+            letterFrequencies[1] = 1;
+            letterFrequencies[2] = 3;
+            letterFrequencies[3] = 4;
+            letterFrequencies[4] = 13;
+            letterFrequencies[5] = 2;
+            letterFrequencies[6] = 2;
+            letterFrequencies[7] = 6;
+            letterFrequencies[8] = 7;
+            letterFrequencies[9] = 0;
+            letterFrequencies[10] = 1;
+            letterFrequencies[11] = 4;
+            letterFrequencies[12] = 2;
+            letterFrequencies[13] = 7;
+            letterFrequencies[14] = 8;
+            letterFrequencies[15] = 2;
+            letterFrequencies[16] = 0;
+            letterFrequencies[17] = 6;
+            letterFrequencies[18] = 6;
+            letterFrequencies[19] = 9;
+            letterFrequencies[20] = 3;
+            letterFrequencies[21] = 1;
+            letterFrequencies[22] = 2;
+            letterFrequencies[23] = 0;
+            letterFrequencies[24] = 2;
+            letterFrequencies[25] = 0;
+
         }
 
         public IChromosome[] GeneratePopulation()
@@ -65,10 +94,7 @@ namespace Genetic_Algorithm
             {
                 values = new char[ChromosomeLength];
 
-                for (int j = 0; j < ChromosomeLength; j++)
-                {
-                    values[j] = GenerateValue();
-                }
+                values = GenerateValues();
 
                 Population[i] = new Chromosome(0, values);
             }
@@ -76,40 +102,125 @@ namespace Genetic_Algorithm
             return Population;
         }
 
-        private char GenerateValue()
+        private char[] GenerateValues()
         {
-            int val = R.Next(1, 27);
-            switch (val)
+            char[] values = new char[ChromosomeLength];
+            double onepPer = (Convert.ToDouble(ChromosomeLength)/100);
+            int[] noLetters = new int[26];
+
+            for (int i = 0; i < 25; i++)
             {
-                case 1: return 'a';
-                case 2: return 'b';
-                case 3: return 'c';
-                case 4: return 'd';
-                case 5: return 'e';
-                case 6: return 'f';
-                case 7: return 'g';
-                case 8: return 'h';
-                case 9: return 'i';
-                case 10: return 'j';
-                case 11: return 'k';
-                case 12: return 'l';
-                case 13: return 'm';
-                case 14: return 'n';
-                case 15: return 'o';
-                case 16: return 'p';
-                case 17: return 'q';
-                case 18: return 'r';
-                case 19: return 's';
-                case 20: return 't';
-                case 21: return 'u';
-                case 22: return 'v';
-                case 23: return 'w';
-                case 24: return 'x';
-                case 25: return 'y';
-                case 26: return 'z';
+                noLetters[i] = Convert.ToInt32(onepPer * letterFrequencies[i]);
             }
 
-            throw new Exception();
+            foreach (int i in noLetters)
+            {
+                for (int j = 0; j <= i; j++)
+                {
+                    switch(i)
+                    {
+                        case 0:
+                            values[getRandom(values)] = 'a';
+                            break;
+                        case 1:
+                            values[getRandom(values)] = 'b';
+                            break;
+                        case 2:
+                            values[getRandom(values)] = 'c';
+                            break;
+                        case 3:
+                            values[getRandom(values)] = 'd';
+                            break;
+                        case 4:
+                            values[getRandom(values)] = 'e';
+                            break;
+                        case 5:
+                            values[getRandom(values)] = 'f';
+                            break;
+                        case 6:
+                            values[getRandom(values)] = 'g';
+                            break;
+                        case 7:
+                            values[getRandom(values)] = 'h';
+                            break;
+                        case 8:
+                            values[getRandom(values)] = 'i';
+                            break;
+                        case 9:
+                            values[getRandom(values)] = 'j';
+                            break;
+                        case 10:
+                            values[getRandom(values)] = 'k';
+                            break;
+                        case 11:
+                            values[getRandom(values)] = 'l';
+                            break;
+                        case 12:
+                            values[getRandom(values)] = 'm';
+                            break;
+                        case 13:
+                            values[getRandom(values)] = 'n';
+                            break;
+                        case 14:
+                            values[getRandom(values)] = 'o';
+                            break;
+                        case 15:
+                            values[getRandom(values)] = 'p';
+                            break;
+                        case 16:
+                            values[getRandom(values)] = 'q';
+                            break;
+                        case 17:
+                            values[getRandom(values)] = 'r';
+                            break;
+                        case 18:
+                            values[getRandom(values)] = 's';
+                            break;
+                        case 19:
+                            values[getRandom(values)] = 't';
+                            break;
+                        case 20:
+                            values[getRandom(values)] = 'u';
+                            break;
+                        case 21:
+                            values[getRandom(values)] = 'v';
+                            break;
+                        case 22:
+                            values[getRandom(values)] = 'w';
+                            break;
+                        case 23:
+                            values[getRandom(values)] = 'x';
+                            break;
+                        case 24:
+                            values[getRandom(values)] = 'y';
+                            break;
+                        case 25:
+                            values[getRandom(values)] = 'z';
+                            break;
+                    }
+                    
+                }
+            }
+
+            return values;
         }
+
+        private int getRandom(char[] values)
+        {
+            int pos = R.Next(0, ChromosomeLength - 1);
+            while (values[pos] != '\0')
+            {
+                if ((pos + 1) < ChromosomeLength - 1)
+                {
+                    pos = pos + 1;
+                }
+                else
+                {
+                    pos = 0;
+                }
+            }
+            return pos;
+        }
+
     }
 }

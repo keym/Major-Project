@@ -11,6 +11,7 @@ namespace Genetic_Algorithm
         private int popSize;
         private int chromosomeLength;
         private IChromosome[] population;
+        Random Rand;
 
         public IChromosome[] Population
         {
@@ -58,6 +59,7 @@ namespace Genetic_Algorithm
         {
             Population = new Chromosome[PopSize];
             char[] values = new char[ChromosomeLength];
+            Rand = new Random();
 
             for (int i = 0; i < PopSize; i++)
             {
@@ -70,8 +72,6 @@ namespace Genetic_Algorithm
 
         private char[] Randomize()
         {
-            Random Rand = new Random();
-
             char[] key = new char[26];
             key[0] = 'a';
             key[1] = 'b';
