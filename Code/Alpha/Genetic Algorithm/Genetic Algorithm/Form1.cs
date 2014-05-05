@@ -79,8 +79,9 @@ namespace Genetic_Algorithm
             {
             PopMan popMan = new PopMan(PopulationSize, TimeLimit, Cipher, Fitness, Selection, Mutation, Crossover);
             popMan.Run();
-            }
             MessageBox.Show("Algorithm Complete");
+            }
+           
 
         }
 

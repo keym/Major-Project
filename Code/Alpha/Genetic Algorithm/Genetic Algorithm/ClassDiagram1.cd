@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Genetic_Algorithm.SubstitutionCipher" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="1" Width="1.5" />
+    <Position X="14.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Ciphers\SubstitutionCipher.cs</FileName>
@@ -17,54 +17,54 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Genetic_Algorithm.Z340Cipher" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Position X="14.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Ciphers\Z340Cipher.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.Z408Cipher" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="1.25" Width="1.5" />
+  <Class Name="Genetic_Algorithm.Z408Cipher" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Ciphers\Z408Cipher.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.BiGramFitness" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="3" Width="1.5" />
+  <Class Name="Genetic_Algorithm.BiGramFitness" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAggAAAIAAAEAAAAAAAIgAAAAAAAACAgAAA=</HashCode>
       <FileName>Fitness\BiGramFitness.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.ngram" Collapsed="true">
-    <Position X="14.25" Y="3" Width="1.5" />
+  <Class Name="Genetic_Algorithm.ngram">
+    <Position X="14.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAgAAAgAAA=</HashCode>
       <FileName>Fitness\ngram.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Genetic_Algorithm.NGramFitness" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="3" Width="1.5" />
+  <Class Name="Genetic_Algorithm.NGramFitness" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAggAAAIAAAEAAAAAAAIgAAAAAAAACAgAAA=</HashCode>
       <FileName>Fitness\NGramFitness.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.ReducedFitness" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="3.75" Width="1.5" />
+  <Class Name="Genetic_Algorithm.ReducedFitness" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAggAAAIAAAEAAAAAAAIgAAAAAAAACAgAAA=</HashCode>
       <FileName>Fitness\ReducedFitness.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.TriGramFitness" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="3.75" Width="1.5" />
+  <Class Name="Genetic_Algorithm.TriGramFitness" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAggAAAIAAAEAAAAAAAIgAAAAAAAACAgAAA=</HashCode>
       <FileName>Fitness\TriGramFitness.cs</FileName>
@@ -79,23 +79,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Genetic_Algorithm.DualPointCrossover" BaseTypeListCollapsed="true">
-    <Position X="10" Y="9.5" Width="1.5" />
+    <Position X="10.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Genetics\DualPointCrossover.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.MultiMutation" BaseTypeListCollapsed="true">
-    <Position X="6.5" Y="11.5" Width="1.5" />
+  <Class Name="Genetic_Algorithm.MultiMutation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Genetics\MultiMutation.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.SingleMutation" BaseTypeListCollapsed="true">
-    <Position X="8.25" Y="11.5" Width="1.5" />
+  <Class Name="Genetic_Algorithm.SingleMutation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Genetics\SingleMutation.cs</FileName>
@@ -103,14 +103,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Genetic_Algorithm.SinglePointCrossover" BaseTypeListCollapsed="true">
-    <Position X="10" Y="8.25" Width="1.5" />
+    <Position X="12.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Genetics\SinglePointCrossover.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.SubGenetics" BaseTypeListCollapsed="true">
+  <Class Name="Genetic_Algorithm.SubGenetics" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="8.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAQAAAAAEAAAAAAAAAAAAAAAAAACgAAAAgAAAA=</HashCode>
@@ -118,23 +118,23 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.SubMultiMutation" BaseTypeListCollapsed="true">
-    <Position X="10" Y="12.25" Width="1.5" />
+  <Class Name="Genetic_Algorithm.SubMultiMutation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Genetics\SubMultiMutation.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.SubSingleMutation" BaseTypeListCollapsed="true">
-    <Position X="10" Y="10.75" Width="1.5" />
+  <Class Name="Genetic_Algorithm.SubSingleMutation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Genetics\SubSingleMutation.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.ZodiacGenetics" BaseTypeListCollapsed="true">
+  <Class Name="Genetic_Algorithm.ZodiacGenetics" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="6.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAQAAAAAEAAAAAAAAAAAAAAAAAACgAAAAgAAAA=</HashCode>
@@ -159,7 +159,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Genetic_Algorithm.ZodiacPopGen" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14.75" Y="7.5" Width="1.5" />
+    <Position X="14.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IGAAAEAAAAgAAAAIAEAAAEAAAIAAAAAAAAAIAAAAAQA=</HashCode>
       <FileName>Population Generation\ZodiacPopGen.cs</FileName>
@@ -197,8 +197,8 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Genetic_Algorithm.TimeTermination">
-    <Position X="6.75" Y="2.5" Width="1.5" />
+  <Class Name="Genetic_Algorithm.TimeTermination" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Termination\TimeTermination.cs</FileName>

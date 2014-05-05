@@ -112,12 +112,12 @@ namespace Genetic_Algorithm
             {
                 noLetters[i] = Convert.ToInt32(onepPer * letterFrequencies[i]);
             }
-
+            int count = 0;
             foreach (int i in noLetters)
             {
-                for (int j = 0; j <= i; j++)
+                for (int j = 0; j < i; j++)
                 {
-                    switch(i)
+                    switch(count)
                     {
                         case 0:
                             values[getRandom(values)] = 'a';
@@ -200,6 +200,7 @@ namespace Genetic_Algorithm
                     }
                     
                 }
+                count++;
             }
 
             return values;
@@ -210,7 +211,7 @@ namespace Genetic_Algorithm
             int pos = R.Next(0, ChromosomeLength - 1);
             while (values[pos] != '\0')
             {
-                if ((pos + 1) < ChromosomeLength - 1)
+                if ((pos + 1) <= ChromosomeLength - 1)
                 {
                     pos = pos + 1;
                 }
